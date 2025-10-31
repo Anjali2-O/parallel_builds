@@ -69,7 +69,7 @@ jobs:
       run: |
         echo "Deployment step: pull Docker image and run on server"
         # Example deployment commands:
-        # docker pull ${{ secrets.DOCKERHUB_USERNAME }}/node-parallel-ci:latest
-        # docker stop node-app || true
-        # docker rm node-app || true
-        # docker run -d -p 80:3000 --name node-app ${{ secrets.DOCKERHUB_USERNAME }}/node-parallel-ci:latest
+        docker pull ${{ secrets.DOCKERHUB_USERNAME }}/node-parallel-ci:latest
+        docker stop node-app || true
+        docker rm node-app || true
+        docker run -d -p 80:3000 --name node-app ${{ secrets.DOCKERHUB_USERNAME }}/node-parallel-ci:latest
